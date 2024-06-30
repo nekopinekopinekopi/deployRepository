@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+      <meta charset="utf-8">
+      <title>英単語帳へようこそ！</title>
+      <link rel="stylesheet" href="{% static 'accounts/css/welcome.css' %}">
+   </head>
+   <body>
+     <h1>英単語帳へようこそ！</h1>
+     <div class="message">
+       <h3>このアプリでできること</h3>
+       <ol>
+         <li>＜ 英単語を登録できる ＞</li>
+         <li>＜ 登録した英単語を使いクイズを解ける ＞</li>
+       </ol>
+     </div>
+     <div class="botton">
+       <a class="regist" href="{% url 'accounts:user_regist' %}">新規登録</a>
+       <a class="login" href="{% url 'accounts:login' %}">ログイン</a>
+     </div>
+   </body>
+</html>

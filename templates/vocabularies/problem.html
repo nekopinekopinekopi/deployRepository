@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}問題{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/problem.css' %}">
+{% block content %}
+
+<a class="back-quiz-1" href="{% url 'vocabularies:quiz' %}">«クイズページに戻る</a>
+
+<div class="problem-group">
+<h1 id="problem-quiz">QUIZ</h1>
+  {% if word %}
+      <p id="problem-word">この英単語の意味を答えてください</p>
+      <p id="problem-english" >{{ word.english_word }}</p>
+  {% endif %}
+    
+  <form class="problem-form" method="post">
+      {% csrf_token %}
+      
+      <div class="problem-form-group">
+        <label for="{{ form.meaning_word.id_for_label }}">{{ form.meaning_word.label }}</label>
+        <div class="radio-options">
+          {% for radio in form.meaning_word %}
+            <div class="radio-option">
+              {{ radio.tag }} {{ radio.choice_label }}
+            </div>
+          {% endfor %}
+        </div>
+        {% if form.meaning_word.errors %}
+          <ul class="problem-errorlist">
+            {% for error in form.meaning_word.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <div class="problem-form-group">
+        <input id="problem-answer-button" type="submit" value="答える">
+      </div>
+  </form>
+</div>
+{% endblock %}
+

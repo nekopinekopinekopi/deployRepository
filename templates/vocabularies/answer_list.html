@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}クイズ回答結果一覧{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/answer_list.css' %}">
+{% block content %}
+<a class="back-quiz" href="{% url 'vocabularies:quiz' %}">クイズメニューを表示する</a>
+<a class="back-english-list" href="{% url 'vocabularies:vocabulary_list' %}">英単語一覧を見る</a>
+
+
+<div class="result-query">
+<h2 id="result-list">クイズ回答結果一覧リスト</h2>
+<form class="result-form" method="get" action="{% url 'vocabularies:answer_list' %}">
+    <label id="arrange" for="order_by">並べ替え: </label>
+    <select id="arrange-option" name="order_by" id="order_by">
+      <option value="create_at" {% if order_by == 'create_at' %}selected{% endif %}>回答日時順</option>
+      <option value="english_word" {% if order_by == 'english_word' %}selected{% endif %}>アルファベット順</option>
+    </select>
+    <label id="correct" for="is_correct">正解〇 / 不正解✕:</label>
+    <select id="correct-option" name="is_correct" id="is_correct">
+      <option value="" {% if is_correct == '' %}selected{% endif %}>全て</option>
+      <option value="true" {% if is_correct == 'true' %}selected{% endif %}>正解</option>
+      <option value="false" {% if is_correct == 'false' %}selected{% endif %}>不正解</option>
+    </select>
+    <button type="submit">実行</button></form>
+</form>
+
+    
+<table class="result-table">
+<thead>
+  <tr>
+     <th>出題された英単語</th>
+     <th>正しい意味</th>
+     <th>{{ request.user.username }}さんが選んだ英単語</td>
+     <th>正解/不正解</th>
+     <th>回答日時</th>
+  </tr>
+</thead>
+<tbody>
+{% for answers in object_list %}
+  <tr>
+     <td>{{ answers.registerd_english_word_id.english_word }}</td>
+     <td>{{ answers.registerd_english_word_id.meaning_word }}</td>
+     <td>{{ answers.choice }}</td>
+     <td>{{ answers.is_correct|yesno:"正解〇,不正解✕" }}</td>
+     <td>{{ answers.create_at  }}</td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

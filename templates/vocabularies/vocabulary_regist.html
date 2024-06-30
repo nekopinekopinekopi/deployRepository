@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}英単語登録{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/vocabulary_regist.css' %}">
+{% block content %}
+
+<a class="back-home" href="{% url 'vocabularies:home' %}">«ホームに戻る</a>
+
+<div class="vocabulary-regist-group">
+  <h1 id="english-regist-word">英単語登録</h1>
+  <form class="english-regist-form" action="{% url 'vocabularies:vocabulary_regist' %}" method="POST">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="english-regist-form-group" class="english-regist-form-group">
+      {{ form.english_word.label_tag }}
+      {{ form.english_word }}
+      {{ form.english_word.errors }}
+    </div>
+    <div class="english-regist-form-group" class="english-regist-form-group">
+      {{ form.meaning_word.label_tag }}
+      {{ form.meaning_word }}
+      {{ form.meaning_word.errors }}
+    </div>
+    <div class="english-regist-form-group">
+      {{ form.example_sentence.label_tag }}
+      {{ form.example_sentence }}
+      {{ form.example_sentence.errors }}
+    </div>
+    <div class="english-regist-form-group">
+      {{ form.meaning_of_example_sentence.label_tag }}
+      {{ form.meaning_of_example_sentence }}
+      {{ form.meaning_of_example_sentence.errors }}
+    </div>
+    <input class="regist" type="submit" value="登録">
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}クイズ回答結果{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/answer.css' %}">
+{% block content %}
+<a class="back-home" href="{% url 'vocabularies:home' %}">«ホームに戻る</a>
+<h1 id="rezult">クイズ回答結果</h1>
+<table class="answer">
+    <tr>
+        <th>出題された英単語</th>
+        <th>正しい意味</th>
+        <th> {{ request.user.username }}さんが選んだ英単語</th>
+        <th>正解/不正解</th>
+        <th>回答日時</th>
+    </tr>
+    {% for answer in answers %}
+    <tr>
+        <td>{{ answer.registerd_english_word_id.english_word }}</td>
+        <td>{{ answer.registerd_english_word_id.meaning_word }}</td>
+        <td>{{ answer.choice }}</td>
+        <td>{{ answer.is_correct|yesno:"正解〇,不正解✕" }}</td>
+        <td>{{ answer.create_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="actions">
+  <a id="antion-1" href="{% url 'vocabularies:problem_view' %}">もう一度クイズに挑戦する</a>
+  <a id="antion-2" href="{% url 'vocabularies:vocabulary_list' %}">英単語一覧を見る</a>
+  <a id="antion-3" href="{% url 'vocabularies:answer_list' %}">回答結果一覧を見る</a>
+</div>
+{% endblock %}
+

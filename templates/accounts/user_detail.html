@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+   <title>{% block title %}あなたの情報{% endblock %}</title>
+   <link rel="stylesheet" href="{% static 'accounts/css/user_detail.css' %}">
+{% block content %}
+<a class="back-home" href="{% url 'vocabularies:home' %}">«ホームに戻る</a>
+<div class="user-detail">
+  <h1 id="username">{{ user_detail.username }}さんの情報</h1>
+  <p class="detail">ユーザーネーム: {{ user_detail.username }}</p>
+  <p class="detail">メールアドレス: {{ user_detail.email }}</p>
+  <p class="detail">作成日: {{ user_detail.create_at }}</p>
+  <p class="detail">更新日: {{ user_detail.update_at }}</p>
+  <a class="user-edit" href="{% url 'accounts:user_update' %}">編集する</a>
+</div>
+{% endblock %}

@@ -1,0 +1,245 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+
+/* vocabulary_list.css */
+
+
+.back-home {
+  text-align: left;
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
+
+/* コンテンツのスタイル */
+.english-list {
+  background-color: #fff; /* 白い背景 */
+  border-radius: 10px; /* 角丸 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影 */
+  padding: 20px;
+  margin-top: 30px;
+  margin-left: 150px;
+  margin-bottom: 40px;
+  max-width: 800px; /* 最大幅を設定 */
+  width: 100%;
+}
+
+
+#list-word  {
+  text-align: center;
+  color: #6d4c41; /* 落ち着いたブラウン */
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+
+
+.search-form {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.search {
+  width: 30%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+
+.label-arrange {
+  margin-left: 30px;
+  margin-right: 5px;
+  color: #6d4c41; /* 落ち着いたブラウン */
+}
+
+
+.select-options {
+  padding: 10px;
+  margin-right  : 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+
+.execution {
+  background-color: #6d4c41; /* ボタンの背景色 */
+  color: #fff; /* ボタンのテキスト色 */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* 角丸 */
+  font-size: 1em;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.execution:hover {
+  background-color: #5c4034; /* ホバー時の色 */
+}
+
+/* テーブルのスタイル */
+.vocabulary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+.vocabulary-table thead th {
+  background-color: #f4d7d0; /* 柔らかいピンク */
+}
+
+.vocabulary-table th,
+.vocabulary-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.vocabulary-table tr:nth-child(even) {
+  background-color: #f7f5dc; /* 柔らかい黄色 */
+}
+
+
+/* リンクのスタイル */
+.edit-button {
+  color: #6d4c41;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 28px;
+}
+
+.edit-button:hover {
+  color: #6d4c41;
+  text-decoration: underline;
+}
+
+/* 削除ボタンのスタイル */
+.delete-button {
+  background-color: #e57373; /* ボタンの背景色 */
+  color: #fff; /* ボタンのテキスト色 */
+  padding: 5px 10px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 15px; /* 角丸 */
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* ホバー時の色 */
+}

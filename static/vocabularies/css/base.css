@@ -1,0 +1,184 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+
+
+
+/* base.css */
+
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ceab6f; /* 淡い背景色 */
+    margin-top: 0;
+    padding: 0;
+}
+
+
+
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+  background-color: #f4d7d0;
+  margin-bottom: 0px;
+  border-bottom: 2px dashed #d7bcbc;
+  padding-top: 20px;
+  position: fixed;  /* ナビゲーションバーを固定 */
+  top: 0;  /* 画面の上部に配置 */
+  width: 100%;  /* 画面の幅に合わせる */
+  z-index: 1000;  /* 他の要素の上に表示 */
+}
+
+.navbar-brand {
+    color: #6d4c41 !important;  /*リンクの文字の色*/
+    border: 1px solid transparent;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;  /*具体的には、テキストの太さを強調するために使用されます。*/
+    padding: 13px 25px;  /* ボタン風のパディング */
+    border-radius: 15px; /* ボタンの角を丸める */
+    background-color: #ffe5e1; /* ほんのり淡いピンクの背景 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    background-color: #f8b7b4;
+    color: #ffffff !important;  /* /* ホバー時のテキスト色を白に */
+    text-decoration: none; /* テキストの下線を消す */
+    transform: scale(1.05);
+}
+
+
+.navbar-brand:active {
+  background-color: #f4978e; /* アクティブ時にさらに濃いピンク */
+  color: #fff;
+}
+
+/* コンテナのスタイル */
+.container {
+  padding: 20px;
+  margin-top: 100px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* 画面の大小に合わせてナビゲーションバーが動く設定 */
+/* これはCSSのメディアクエリを定義するためのもので、特定の条件下でのみスタイルを適用します。 */
+@media (max-width: 768px) {  /*条件を設定。画面の幅が768ピクセル以下のときに指定したスタイルが適用されます。*/
+  .navbar {
+      display: flex;  /*ナビゲーションバーのレイアウトをフレックスボックスに変更します。フレックスボックスは要素を並べるためのレイアウトモデルです。*/
+      flex-direction: column;  /*フレックスボックスの子要素を縦方向に並べます。通常、ナビゲーションバーのリンクは横に並んでいますが、画面幅が狭くなったときに縦に並ぶようになります。*/
+      align-items: center; /* 中央揃え */
+  }
+  .navbar-brand {
+      margin-bottom: 10px;  /*各ナビゲーションリンクの下に10ピクセルの余白を追加します。これにより、縦に並んだリンクの間にスペースが生まれ、見た目が良くなります。*/
+  }
+}

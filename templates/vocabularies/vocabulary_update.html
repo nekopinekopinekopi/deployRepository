@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}英単語編集{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/vocabulary_update.css' %}">
+{% block content %}
+<a id="back-list" href="{% url 'vocabularies:vocabulary_list' %}">«英単語一覧に戻る</a>
+<div class="update-english">
+<h1 id="update-vocabulary">英単語編集</h1>
+<form class="update-english-form" action="{% url 'vocabularies:vocabulary_update' pk=object.pk %}" method="POST">  {# pk=object.pk で、pkを指定していないとエラーになったよ #}
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input id="update-english-button" type="submit" value="更新">
+</form>
+</div>
+{% endblock %}

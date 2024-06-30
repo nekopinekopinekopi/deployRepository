@@ -1,0 +1,186 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+
+
+/* home.css */
+
+/* HOMEページの特有のスタイル */
+
+
+#home {
+    text-align: center;
+    color: #6d4c41; /* ナビゲーションバーと同様の色合い */
+    margin: 20px 0; /* 上下に20pxのマージンを追加 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* 少しの影を追加 */
+    font-size: 60px; /* 大きなフォントサイズ */
+}
+
+.message {
+    text-align: center;
+    color: #6e4b3e; /* やわらかいブルー */
+    font-size: 1.5em;
+    margin: 20px auto; /* 左右のマージンを均等に */    margin-right: 20%;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f5d8;
+    border-radius: 15px; /* 角丸を少し大きく */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を少し強く */
+    max-width: 600px; /* コンテナ幅を制限 */
+}
+
+
+
+
+.description-list {
+  text-align: left  ; /* 中央揃え */
+  margin: 50px auto; /* 左右のマージンを均等に */
+  max-width: 650px; /* コンテナ幅を制限 */
+  padding: 40px;
+  background-color: #ffffff; /* 背景を白に */
+  border-radius: 10px; /* 角丸 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+
+#discription {
+  text-align: center;
+  color: #6d4c41; /* ナビゲーションバーと同様の色合い */
+  font-size: 1.2em;
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+
+
+.description-list ul {
+  list-style: none; /* リストスタイルを削除 */
+  padding: 0;
+}
+
+.description-list li {
+  color: #6d4c41; /* 文字色 */
+  font-size: 1em;
+  margin: 15px 0; /* 各リストアイテムの間にスペース */
+  padding: 10px;
+  background-color: #f9f5d8; /* 背景色 */
+  border-radius: 5px; /* 角丸 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+.image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 50em;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-2 {
+  text-align: center;
+  color: #6d4c41; /* ナビゲーションバーと同様の色合い */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

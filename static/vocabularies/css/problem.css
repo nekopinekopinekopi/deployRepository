@@ -1,0 +1,215 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+/* problem.css */
+
+
+.back-quiz-1 {
+  display: flex;
+  color: #6d4c41;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  
+}
+
+.back-quiz-1:hover {
+  color: #6d4c41;
+  text-decoration: underline;
+}
+
+
+.problem-group {
+  text-align: left;
+  max-width: 600px;
+  margin: 50px auto;
+  margin-top: 30px;
+  padding: 50px;
+  padding-top: 30px;
+  background-color: #fffafa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+
+
+#problem-quiz {
+  text-align: center;
+  font-size: 2em;
+  color: #6d4c41;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+
+
+#problem-word {
+  font-size: 110%;
+  text-align: center  ;
+  color: #7e5b4f;
+}
+
+
+
+
+#problem-english {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+
+.problem-form {
+  margin-left: 110px;
+}
+
+
+.problem-form label {
+  color: #7e5b4f;
+  margin-bottom: 10px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.radio-option {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+#problem-answer-button {
+  background-color: #d9b8a6; /* 明るく薄い茶色に変更 */
+  color: #fff;
+  padding: 8px 20px; /* パディングを減らして控えめに */
+  margin-top: -70px;
+  margin-left: 200px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em; /* フォントサイズを小さく */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+#problem-answer-button:hover {
+  background-color: #c7a393; /* ホバー時も少し薄めの色 */
+}
+
+.errorlist {
+  color: red;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

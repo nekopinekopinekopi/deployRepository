@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}クイズ関連{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/quiz.css' %}">
+{% block content %}
+<a class="back-home" href="{% url 'vocabularies:home' %}">«ホームに戻る</a>
+<h1 class="quiz-menu">クイズメニュー<h1>
+<div class="quiz-group">
+  <a id="puiz" href="{% url 'vocabularies:problem_view' %}">クイズに挑戦する</a>
+  <div class="quiz-description">
+    <h1>あなたが登録した英単語の中から、英単語が出題されます。<h1>
+    <h1>三択の中から該当する意味を答えていただきます。<h1>
+    <h1>三問１セットです。<h1>
+    <h1>ログアウトをしなければ、中断しても続きから始められます。<h1>
+    <h1>注意！: 英単語の登録数が三つ以上でないと、クイズに挑戦できません。<h1>
+  </div>
+</div>
+<div class="answer-list-group">
+  <a id="answer-list" href="{% url 'vocabularies:answer_list' %}">回答結果一覧</a>
+  <div class="answerlist-description">
+    <h1>今まで、あなたが答えた回答結果を一覧で見ることができます。</h1>
+  </div>
+</div>
+{% endblock %}

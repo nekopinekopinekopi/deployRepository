@@ -1,0 +1,201 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+
+
+
+/* answer.css */
+
+
+
+.back-home {
+  text-decoration: none;
+  color: #7e5b4f;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+#rezult {
+  text-align: center;
+  font-size: 2em;
+  color: #7e5b4f;
+  margin-top: 20px;
+}
+
+.answer  {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.answer th, .answer td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.answer th {
+  background-color: #f2e3dc;
+  color: #7e5b4f;
+  font-weight: bold;
+}
+
+.answer tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.answer   tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+
+.actions {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+#antion-1 {
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  background-color: #7e5b4f;
+}
+
+#antion-2 {
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  background-color: #7e5b4f;
+}
+
+#antion-3 {
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  background-color: #7e5b4f;
+}
+
+#antion-1 #antion-2 #antion-3 :hover {
+  text-decoration: underline;
+}

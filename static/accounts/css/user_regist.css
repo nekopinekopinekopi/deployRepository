@@ -1,0 +1,234 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+
+/* user_regist.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fcecd1;  /* 柔らかい淡いオレンジの背景色 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 3px;
+  padding: 0;
+  color: #34495e;  /* テキストカラー */
+}
+
+h1 {
+  font-size: 3em;
+  color: #2c3e50;
+  margin-top: 20px;  /* 上部の余白を設定します。 */
+  text-align: center;  /* テキストを中央揃えにします。 */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);  /* テキストに影を追加して、立体感を出します。 */
+}
+
+/* フォーム全体のスタイル */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 中央揃えにする */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form h2 {
+  font-size: 1.8em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* フォームのラベルと入力欄を縦に揃える */
+.form form {
+  width: 100%;
+  max-width: 400px; /* フォームの最大幅を設定 */
+  text-align: center; /* フォーム内の要素を中央揃えにする */
+}
+
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+
+
+.form-field .error-message {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+
+
+
+
+.form form input[type="text"],
+.form form input[type="email"],
+.form form input[type="password"],
+.form form input[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+
+
+
+/* 新規登録ボタンのスタイル */
+.form form input[type="submit"] {
+  display: block;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em; /* フォントサイズを小さくします */
+  font-weight: bold;
+  padding: 8px 20px; /* パディングを小さくします */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 0; /* 最後のマージンボトムをリセット */
+  width: 150px; /* 幅を狭くします */
+  text-align: center; /* テキストを中央揃えにする */
+  margin-left: 31%;
+}
+
+
+/* ホバー時のスタイル */
+.form form input[type="submit"]:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+}
+
+

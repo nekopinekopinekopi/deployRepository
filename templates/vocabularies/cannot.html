@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}クイズにはまだ挑戦できません{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/cannot.css' %}">
+{% block content %}
+<h1 class="message-1">まだ挑戦できません✕</h1>
+<div class="cannot-group">
+  <p id="cannot">英単語を三つ以上登録すると、クイズに挑戦できます！</p>
+  <a id="regist-engrish-button" href="{% url 'vocabularies:vocabulary_regist' %}">英単語を登録しにいく<a/>
+</div>
+{% endblock %}

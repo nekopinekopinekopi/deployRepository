@@ -1,0 +1,195 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+
+/* vocabulary_update.css */
+#back-list {
+  text-decoration: none;
+  color: #6d4c41;
+  display: inline-block;
+  color: #6d4c41;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+a#back-list:hover {
+  text-decoration: underline;
+}
+
+#update-vocabulary{
+    text-align: center;
+    color: #6d4c41; /* ナビゲーションバーと同様の色合い */
+    margin: 20px 0; /* 上下に20pxのマージンを追加 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* 少しの影を追加 */
+    font-size: 40px; /* 大きなフォントサイズ */
+}
+
+
+.update-english {
+  max-width: 600px;
+  margin: 50px auto;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #fffafa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.update-english-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.update-english-form label {
+  font-weight: bold;
+  color: #6d4c41;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: normal;
+  text-align: center;
+}
+
+.update-english-form input,
+.update-english-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+
+
+#update-english-button {
+  background-color: #6d4c41;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  width: auto ; /* 幅を自動に変更 */
+  transition: background-color 0.3s;
+}
+
+#update-english-button:hover {
+  background-color: #5c4034;
+}
+
+ul.errorlist {
+  color: red;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.errorlist li {
+  margin-top: 5px;
+}
+

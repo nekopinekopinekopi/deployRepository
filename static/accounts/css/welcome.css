@@ -1,0 +1,201 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+
+/* welcome.css */
+
+body {
+  font-family: 'Helvetica', sans-serif; /*テキスト全体に適用されるフォントファミリーを設定しています。'Helvetica Neue'、Arial、sans-serifの順でフォントが適用されます。*/
+  display: flex; /*フレックスボックスを使用して要素を配置します。*/
+  flex-direction: column; /*要素を縦に並べます。*/
+  align-items: center;  /*子要素(<h1>"message""botton")を中央揃えにします（横方向）。*/
+  justify-content: center;  /*子要素(<h1>"message""botton")を中央揃えにします（縦方向）。*/
+  height: 100vh;  /*ビューポートの高さ全体を使用します。ビューポートとは、ウェブページを表示するための領域のこと。ブラウザのウインドウからアドレスバーやタブなどのブラウザのインターフェースを除いた部分*/
+  margin: 0;  /*ページ全体の余白をゼロにします。*/
+  background-color: #fcecd1; /*背景色を淡いグレーに設定します。*/
+}
+
+h1 {
+  font-size: 3em;
+  color: #2c3e50;
+  margin-top: 20px;  /*上部の余白を設定します。*/
+  text-align: center;  /*テキストを中央揃えにします。*/
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);  /*テキストに影を追加して、立体感を出します。*/
+}
+
+.message, .botton {
+  display: inline-block;
+  width: 30%;  /*要素の幅を親要素の40%に設定します。*/  
+  margin-top: 50px;  /*上部の余白を設定します。*/
+  padding: 20px;  /*内側の余白を設定します。*/
+  background: #fff;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;  /*要素の角を丸くします*/
+}
+
+.message {
+  text-align: left;  /*テキストを左揃えにします。*/
+  margin-right: 0%;  /*右側の余白を設定します。*/
+}
+
+.message h3 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.message ol {
+  list-style-position: inside;  /* リストマーカーをリスト内に配置 */
+  padding-left: 20px;
+  color: #34495e;
+  font-size: 1.2em;  /* フォントサイズを大きくして読みやすくする */
+  line-height: 1.6em;  /* 行間を広くして読みやすくする */
+  font-family: 'Arial', sans-serif; /* フォントを指定 */
+}
+
+.botton {
+  text-align: center;  /*テキストを中央揃えにします。*/
+  margin-left: 0%;  /*左側の余白を設定します。*/
+}
+
+.botton a.regist {
+  display: inline-block;
+  margin: 10px 20px 20px 0; /* 右側のボタンに右マージンを追加して隙間を広げる */
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #e67e22;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botton a.login {
+  display: inline-block;
+  margin: 10px 0 20px; /* 左側のボタンに下マージンを追加して隙間を広げる */
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #e67e22;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botton a:hover {
+  background-color: #d35400;  /*ホバー時の背景色を濃いオレンジに設定します。*/
+  transform: scale(1.05); /* ホバー時に少し大きくする */
+}
+
+
+
+

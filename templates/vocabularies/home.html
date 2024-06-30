@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}ホーム{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/home.css' %}">
+{% block content %}
+
+<h1 id="home">HOME</h1>
+<div class="message">
+  <h2>学ぶことは決して遅すぎることはありません。</h2>
+  <h2>- レオナルド・ダ・ヴィンチ</h2>
+</div>
+<div class="content-container">
+  <div class="description-list">
+    <h6 id="discription">上記ボタンの説明</h6>
+    <ul>
+      <li>ホーム: この画面に戻ってきます。</li>    
+      <li>英単語登録: 登録したい英単語を登録できます。</li>    
+      <li>英単語一覧: 登録した英単語を一覧で見ることができます。</li>    
+      <li>クイズ: 登録した英単語を使ってクイズに挑戦できます。</li>    
+      <li>ユーザー情報: ログイン中のあなたの情報を見ることができます。</li>    
+      <li>ログアウト: ログアウトします。</li>    
+    </ul>
+  </div>
+  <img class="image" src="{% static 'hello.jpg' %}">
+</div>
+<h3 class="message-2">少しずつ着実に、新しい言葉を楽しみながら学びましょう！</h3>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}英単語一覧{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/vocabulary_list.css' %}">
+{% block content %}
+
+<a class="back-home" href="{% url 'vocabularies:home' %}">«ホームに戻る</a>
+
+<div class="english-list">
+<h1 id="list-word">英単語一覧</h1>
+<form class="search-form" method="get" action="{% url 'vocabularies:vocabulary_list' %}">
+    <input class="search" type="text" name="q" placeholder="英単語を探す(前方一致)" value="{{ query }}">
+
+    <label class="label-arrange" for="order_by">並べ替え:</label>
+       <select class="select-options" name="order_by" id="order_by">
+         <option value="create_at" {% if order_by == 'create_at' %}selected{% endif %}>作成日順</option>
+         <option value="english_word" {% if order_by == 'english_word' %}selected{% endif %}>アルファベット順</option>
+       </select>
+
+    <bottom class="execution" type="submit">実行</bottom>
+</form>
+<table class="vocabulary-table">
+<thead>
+  <tr>
+     <th>英単語</th>
+     <th>意味</th>
+     <th>例文</th>
+     <th>例文の意味</th>
+     <th>編集/削除</th>
+  </tr>
+</thead>
+<tbody>
+{% for vocabulary in words %}
+  <tr>
+     <td>{{ vocabulary.english_word }}</td>
+     <td>{{ vocabulary.meaning_word }}</td>
+     <td>{{ vocabulary.example_sentence }}</td>
+     <td>{{ vocabulary.meaning_of_example_sentence }}</td>
+    <td>
+      <div class="button-group">
+        <a class="edit-button" href="{% url 'vocabularies:vocabulary_update' pk=vocabulary.id %}">編集</a>
+        <form  action="{% url 'vocabularies:vocabulary_delete' vocabulary.id %}" method="post">
+         {% csrf_token %}
+         <input class="delete-button" type="submit" value="削除">
+        </form>
+      </div>
+     </td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+{% endblock %}
