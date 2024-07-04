@@ -191,6 +191,13 @@ input, select {
   background-color: #5c4034; /* ホバー時の色 */
 }
 
+#no-results-word {
+  color: #6d4c41;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
 /* テーブルのスタイル */
 .vocabulary-table {
   width: 100%;
@@ -208,38 +215,49 @@ input, select {
 .vocabulary-table td {
   padding: 15px;
   border: 1px solid #ddd;
+  word-wrap: break-word;  /* 長い単語を改行 */
+  word-break: break-all;  /* 長い単語がある場合に改行 */
+  white-space: pre-line;  /* 改行を維持しつつ自動改行 */
 }
 
 .vocabulary-table tr:nth-child(even) {
   background-color: #f7f5dc; /* 柔らかい黄色 */
 }
 
+.vocabulary-table td {
+  max-width: 200px; /* セルの最大幅を設定（必要に応じて調整） */
+}
 
-/* リンクのスタイル */
-.edit-button {
-  color: #6d4c41;
-  text-decoration: none;
+
+.button-group {
+  display: flex;
+  justify-content: center;  /* ボタンを中央に配置 */
+  gap: 10px;  /* ボタン間の間隔 */
+}
+
+.edit-button, .delete-button {
+  background-color: #e57373; /* ボタンの背景色 */
+  color: #fff; /* ボタンのテキスト色 */
+  padding: 5px 10px; /* ボタンの内側余白 */
+  margin: 0; /* 外側余白をリセット */
+  border: none;
+  border-radius: 5px; /* 角丸 */
+  font-size: 0.9em;
+  cursor: pointer;
   text-align: center;
-  margin-left: 28px;
+  display: inline-block; /* displayを指定 */
 }
 
 .edit-button:hover {
-  color: #6d4c41;
-  text-decoration: underline;
+  background-color: #d32f2f; /* ホバー時の色 */
+  color: white;
 }
 
-/* 削除ボタンのスタイル */
 .delete-button {
-  background-color: #e57373; /* ボタンの背景色 */
-  color: #fff; /* ボタンのテキスト色 */
-  padding: 5px 10px;
-  margin-left: 20px;
-  border: none;
-  border-radius: 15px; /* 角丸 */
-  font-size: 0.9em;
-  cursor: pointer;
+  background-color: #6A8EAE; /* ボタンの背景色 */
 }
 
 .delete-button:hover {
-  background-color: #d32f2f; /* ホバー時の色 */
+  background-color: #58748E; /* ホバー時の色 */
+  color: white;
 }

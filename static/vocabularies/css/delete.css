@@ -1,0 +1,191 @@
+@charset 'utf8';
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+.english-word-group {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fffafa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;  
+}
+
+.confirmation-english-word {
+    color: #7e5b4f;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.Confirmation {
+  font-size: 23px;
+  text-align: center;
+}
+
+
+.confirmation-caution-button {
+    width: 50%;
+    margin: 20px auto;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    border-collapse: collapse;
+    background-color: #fffafa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;  
+
+}
+
+
+
+
+.caution {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FF4500;
+}
+
+
+.delete-button-group{
+    text-align: center;
+    align-items: center;
+}
+
+
+#delete-button {
+    display: flex;
+    background-color: #FF7F50; /* 読みやすいオレンジ色 */
+    color: #FFFFFF;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    align-items: center;
+}
+
+#delete-button:hover {
+    background-color: #58748E; /* 暗くなる青 */
+}
+
+
+
+.back-vocabulary-list {
+  color: #7e5b4f;
+}
+
+
+.back-vocabulary-list:hover {
+  color: #7e5b4f;
+  text-decoration: underline;
+}

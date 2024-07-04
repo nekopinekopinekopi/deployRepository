@@ -218,7 +218,7 @@ h1 {
   padding: 8px 20px; /* パディングを小さくします */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 0; /* 最後のマージンボトムをリセット */
+  margin-bottom: 30px; /* 最後のマージンボトムをリセット */
   width: 150px; /* 幅を狭くします */
   text-align: center; /* テキストを中央揃えにする */
   margin-left: 31%;
@@ -232,3 +232,11 @@ h1 {
 }
 
 
+.back-welcome {
+  color: #ce633c;
+}
+
+
+.back-welcome:hover {
+  color: #9c4b2e;
+}

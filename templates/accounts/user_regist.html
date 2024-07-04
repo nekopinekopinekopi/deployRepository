@@ -3,7 +3,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>ユーザー</title>
+    <title>ユーザー新規登録</title>
     <link rel="stylesheet" href="{% static 'accounts/css/user_regist.css' %}">
 </head>
   <body>
@@ -53,7 +53,8 @@
 
 
         <div class="form-field">
-          <input type="submit" value="ユーザー登録">
+          <input class="user-regist-button" type="submit" value="ユーザー登録">
+          <a class="back-welcome" href="{% url 'accounts:welcome' %}">«ウェルカムページに戻る</a>
         </div>
       </form>
     </div>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+<title>{% block title %}英単語削除確認{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'vocabularies/css/delete.css' %}">
+{% block content %}
+  <div class="english-word-group">
+    <h1 class="confirmation-english-word">{{ object.english_word }}</h1>
+  </div>
+  <div class="confirmation-caution-button">
+  <h2 class="Confirmation">上記の英単語を、</h2>
+  <h2 class="Confirmation">本当に削除してもいいですか？</h2>
+  <p class="caution">この操作は元に戻せません。</p>
+  <form class="delete-button-group" method="post">
+    {% csrf_token %}
+    <button id="delete-button" type="submit">削除する</button>
+    <a class="back-vocabulary-list" href="{% url 'vocabularies:vocabulary_list' %}">キャンセル</a>
+   </form>
+  </div>
+{% endblock %}

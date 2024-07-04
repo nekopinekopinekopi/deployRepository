@@ -48,6 +48,7 @@ class VocabularylistView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')  # ユーザーが入力した検索クエリを'q'として取得。それをquery変数にぶち込む。
         order_by = self.request.GET.get('order_by', 'create_at')  # 作成日時順をデフォルトにする。
+
         if query:
             queryset = self.model.objects.filter(
                 Q(user_id=self.request.user) &  # ログイン中のユーザー＆
@@ -65,6 +66,7 @@ class VocabularylistView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)  # 親クラスの get_context_data メソッドを呼び出し、既存のコンテキストデータを取得。
         context['query'] = self.request.GET.get('q', '')  # 'query'に、'q'が存在する場合は'q'を格納する。'q'が存在しない場合は、Noneを返すので、Noneのときの初期値として「''」を定めている。初期値を設定することで、検索クエリが空であってもエラーが発生せず、テンプレートが正常に動作するようになります。
         context['order_by'] = self.request.GET.get('order_by', 'create_at')  # 'query'に、'q'が存在する場合は'q'を格納する。'q'が存在しない場合は、Noneを返すので、Noneのときの初期値として「''」を定めている。初期値を設定することで、検索クエリが空であってもエラーが発生せず、テンプレートが正常に動作するようになります。
+        context['no_results'] = not self.get_queryset().exists()  # クエリセットが空かどうかをチェック
         return context
 
 
@@ -217,6 +219,7 @@ class AnswerListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['order_by'] = self.request.GET.get('order_by', 'create_at')
         context['is_correct'] = self.request.GET.get('is_correct', '')
+        context['no_results'] = not self.get_queryset().exists()  # クエリセットが空かどうかをチェック
         return context        
         
 
@@ -230,5 +233,7 @@ class AnswerListView(LoginRequiredMixin, ListView):
 # 英単語削除の動き
 class VocabularyDeleteView(LoginRequiredMixin, DeleteView):
     model = Registered_english_words
+    template_name = os.path.join('vocabularies', 'delete.html')
     success_url = reverse_lazy('vocabularies:vocabulary_list')  # app_name定義してるからこうやって記述しなきゃだ！
    
+    

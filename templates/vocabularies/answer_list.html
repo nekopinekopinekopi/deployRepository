@@ -21,31 +21,34 @@
       <option value="true" {% if is_correct == 'true' %}selected{% endif %}>正解</option>
       <option value="false" {% if is_correct == 'false' %}selected{% endif %}>不正解</option>
     </select>
-    <button type="submit">実行</button></form>
+    <button type="submit">実行</button>
 </form>
 
-    
-<table class="result-table">
-<thead>
-  <tr>
-     <th>出題された英単語</th>
-     <th>正しい意味</th>
-     <th>{{ request.user.username }}さんが選んだ英単語</td>
-     <th>正解/不正解</th>
-     <th>回答日時</th>
-  </tr>
-</thead>
-<tbody>
-{% for answers in object_list %}
-  <tr>
-     <td>{{ answers.registerd_english_word_id.english_word }}</td>
-     <td>{{ answers.registerd_english_word_id.meaning_word }}</td>
-     <td>{{ answers.choice }}</td>
-     <td>{{ answers.is_correct|yesno:"正解〇,不正解✕" }}</td>
-     <td>{{ answers.create_at  }}</td>
-  </tr>
-{% endfor %}
-</tbody>
-</table>
+{% if no_results %} 
+  <p id="no-results-answer">一致するものがありません。</p>
+{% else %}
+  <table class="result-table">
+  <thead>
+    <tr>
+       <th>出題された英単語</th>
+       <th>正しい意味</th>
+       <th>{{ request.user.username }}さんが選んだ英単語</td>
+       <th>正解/不正解</th>
+       <th>回答日時</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for answers in object_list %}
+    <tr>
+       <td>{{ answers.registerd_english_word_id.english_word }}</td>
+       <td>{{ answers.registerd_english_word_id.meaning_word }}</td>
+       <td>{{ answers.choice }}</td>
+       <td>{{ answers.is_correct|yesno:"正解〇,不正解✕" }}</td>
+       <td>{{ answers.create_at  }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+  </table>
+{% endif %}
 </div>
 {% endblock %}

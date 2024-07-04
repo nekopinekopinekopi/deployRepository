@@ -181,7 +181,8 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  width: auto;  /* 幅を自動に設定 */
+  display: block;
+  width: 130px;  /* 幅を自動に設定 */
   padding:  8px 20px; /* パディングを調整してボタンを小さくする */
   background-color: #e67e22;
   color: white;
@@ -192,6 +193,8 @@ input[type="submit"] {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: backgr  ound-color 0.3s ease, transform 0.3s ease;
   margin-top: 10px; /* 上に少しスペースを追加 */  
+  margin-left: 15%;
+  margin-bottom: 30px;
 }
 
 input[type="submit"]:hover {
@@ -204,4 +207,17 @@ input[type="submit"]:hover {
   color: #e74c3c;
   font-size: 0.9em;
   margin-top: 5px;
+}
+
+
+
+.back-welcome {
+  color: #ce633c;
+  border: none;
+
+}
+
+
+.back-welcome:hover {
+  color: #9c4b2e;
 }

@@ -149,11 +149,16 @@ input, select {
   border-radius: 10px;
 }
 
-.result-query form {
+.result-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding:  20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
 }
 
 #arrange {
@@ -201,6 +206,14 @@ input, select {
 
 .result-query button:hover {
   background-color: #6d4c41;
+}
+
+
+#no-results-answer {
+  color: #6d4c41;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
 }
 
 h2#result-list {
