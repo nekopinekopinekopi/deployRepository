@@ -52,7 +52,7 @@ class VocabularylistView(LoginRequiredMixin, ListView):
         if query:
             queryset = self.model.objects.filter(
                 Q(user_id=self.request.user) &  # ログイン中のユーザー＆
-                Q(english_word__startswith=query)  # english_wordカラムからqueryの前方一致のカラムで絞り込む
+                Q(english_word__icontains=query)   # english_wordカラムからqueryの部分一致のカラムで絞り込む
             )
         else:
             queryset =  self.model.objects.filter(user_id=self.request.user)
